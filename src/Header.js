@@ -1,10 +1,8 @@
-
-
 function Header(){
     return(
-        <h1>
-            PETSTAGRAM      
-        </h1>
+        <div>
+            <h1 className="header">Pet Meets Pet</h1>
+        </div>
     )
 }
 
