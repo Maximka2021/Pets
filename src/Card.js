@@ -25,7 +25,7 @@ function Card({ pet, addLike, addComment }){
     }
 
     const comments = pet.comments.map(comment => {
-        return <p className={isComment ? "comments-hide" : "comments-show"}>{comment}</p>
+        return <p id="single-comments" className={isComment ? "comments-hide" : "comments-show"}>{comment}</p>
     })
 
     
@@ -33,13 +33,22 @@ function Card({ pet, addLike, addComment }){
         <div className="card">
             <img onClick={() => setIsHide(!isHide)} src={pet.image} className="image" />
             <h2 className="pet-name">{pet.name}</h2>
-            <p className="pet-age">Age:{pet.age}</p>
-            <p className={isHide ? 'hide' : "show"} >Description:{pet.description}</p>
+            <p className="pet-age">Age:    {pet.age}</p>
+            <p className={isHide ? 'hide' : "show"} >Description: {pet.description}</p>
+            <br></br>
+            <div className="pet-btn">
             <button className="like-btn" onClick={handleClick}>👍{pet.likes}</button>
-            <button onClick={()=> setIsComment(!isComment)} className="comment-btn">💬{pet.comments.lenght} </button>
-            <input onChange={(e)=>setComment(e.target.value)} className={isComment ? "comments-hide" : "comments-show"} type="text" placeholder="comment"/>
-            <button onClick={handleSubmit} className={isComment ? "comments-hide" : "comments-show"}>Submit</button>
+            <button  onClick={()=> setIsComment(!isComment)} className="comment-btn">💬{pet.comments.lenght} </button>
+            </div>
+            <input id="comment-id" onChange={(e)=>setComment(e.target.value)} className={isComment ? "comments-hide" : "comments-show"} type="text" placeholder="Leave me a comment!"/>
+            <button id="submit-id" onClick={handleSubmit} className={isComment ? "comments-hide" : "comments-show"}>Submit</button>
+            
             {comments}
+
+            
+            
+            
+            
         </div>
     )
 }

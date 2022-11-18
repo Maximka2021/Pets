@@ -17,6 +17,7 @@ function App() {
   const [age, setAge] = useState("");
   const [description, setDescription] = useState("");
   const [types, setTypes] = useState("");
+  const [comments, setComment] = useState([]);
   //form states
 
   //filter state
@@ -83,7 +84,9 @@ function App() {
       type: types,
       image: image,
       likes: 0,
-      description: description
+      description: description,
+      comments: comments
+      
     }
 
     fetch(url, {
@@ -99,8 +102,10 @@ function App() {
 
   return (
     <div>
+      <div className="top-of-page">
       <Header/>
       <NavBar />
+      </div>
        <Switch >
       <Route exact path="/">
       <HomePage 
@@ -109,6 +114,7 @@ function App() {
         setAge={setAge}
         setDescription={setDescription}
         setTypes={setTypes}
+        setComment={setComment}
         addPet={addPet}
         cardList={cardList}
         setFilterValue={setFilterValue}
