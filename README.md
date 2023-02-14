@@ -1,6 +1,6 @@
 # Pet meets Pet
 
-Pet meet Pet is a social media application for your pets.
+Pet meet Pet is a social media app for your pets, where you can post pictures, like them and leave comments, find matches for your pets, and shop in an implemented pet store.
 
 ## Installation
 
