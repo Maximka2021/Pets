@@ -28,4 +28,4 @@ to discuss what you would like to change.
 
 ## License
 
-Copyright (c) 2023 Maxim Polyakov
+Copyright (c) 2023 Maximka2021
